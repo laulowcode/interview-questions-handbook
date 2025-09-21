@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  python-interview:
+    build: .
+    container_name: python-interview-handbook
+    volumes:
+      # Mount the current directory to /app for development
+      - .:/app
+      # Mount a named volume for pip cache
+      - pip-cache:/root/.cache/pip
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    working_dir: /app
+    # Override the default command to keep container running
+    command: tail -f /dev/null
+    # Uncomment the following lines if you want to run a specific example
+    # command: python 01-core-language-and-api-design/01-GIL/cpu_bound_example.py
+
+volumes:
+  pip-cache:
