@@ -2,6 +2,16 @@
 
 ---
 
+### TL,DR
+
+- **Core Concept:** The GIL is a lock ensuring that **only one thread executes Python bytecode at any given moment**.
+- **Consequence:** This **prevents true parallelism** for multi-threaded applications (they can't run on multiple CPU cores simultaneously).
+- **I/O-Bound Tasks:** Threads waiting for I/O (like network or database responses) **release the GIL**. This is good, as it allows other threads to run, achieving concurrency.
+- **CPU-Bound Tasks:** Threads performing heavy calculations **do not voluntarily release the GIL**. They hold it and block other threads from running (until the system _forcibly_ switches them out).
+- **Model:** This system is correctly identified as **preemptive multitasking**. The OS (or the GIL's switching mechanism) forcibly interrupts (preempts) threads to manage scheduling, whether the thread "wants" to stop or not.
+
+---
+
 ### What is the GIL?
 
 **GIL** stands for **Global Interpreter Lock**.
