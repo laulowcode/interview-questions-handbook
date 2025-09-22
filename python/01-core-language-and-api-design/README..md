@@ -1,7 +1,7 @@
 ## 🧑‍💻 Group A: Core / Language & API Design
 
-- [x] What is Python’s GIL? How does it affect backend performance?
-- [ ] Async / await in Python: when should you use it, and when not?
+- [x] What is Python's GIL? How does it affect backend performance?
+- [x] Async / await in Python: when should you use it, and when not?
 - [ ] Compare Flask vs FastAPI vs Django REST Framework — pros/cons for building large APIs.
 - [ ] How do you design API versioning to avoid breaking old clients when updating?
 - [ ] Difference between ORM, query builder, and raw SQL — when do you use raw SQL?

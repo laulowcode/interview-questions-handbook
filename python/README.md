@@ -7,6 +7,7 @@ This directory contains Python-specific interview questions and examples, organi
 ### Core Language and API Design
 
 - [GIL (Global Interpreter Lock)](./01-core-language-and-api-design/01-GIL/) - Understanding Python's threading limitations
+- [Async/Await](./01-core-language-and-api-design/02-async-await/) - When to use async/await and when not to
 
 ## 🚀 Getting Started
 
@@ -67,32 +68,3 @@ This directory contains Python-specific interview questions and examples, organi
 - **`cpu_bound_example.py`** - Demonstrates how GIL limits CPU-bound task parallelism
 - **`io_bound_example.py`** - Shows how GIL doesn't affect I/O-bound tasks
 - **`gil_demonstration.py`** - Interactive demonstration of GIL behavior
-
-## 🛠️ Development
-
-### Running Tests
-
-```bash
-# In Docker
-docker-compose exec python-interview pytest
-
-# Locally
-pytest
-```
-
-### Code Formatting
-
-```bash
-# In Docker
-docker-compose exec python-interview black .
-docker-compose exec python-interview flake8 .
-
-# Locally
-black .
-flake8 .
-```
-
-## 📖 Learning Resources
-
-- [Python GIL Explained](https://realpython.com/python-gil/)
-- [Threading vs Multiprocessing in Python](https://realpython.com/python-concurrency/)
