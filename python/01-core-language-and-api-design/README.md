@@ -8,5 +8,5 @@
 - [x] Database transactions: What is ACID? What are isolation levels, and when do you use a high isolation level?
 - [x] Database indexing: when should you create an index, and which type (BTREE, HASH, FULLTEXT, GIN in Postgres)?
 - [ ] Database migration: how do you manage migrations when multiple developers work together?
-- [ ] Model schema design: OneToMany vs ManyToMany vs OneToOne relationships — pros/cons.
+- [x] Model schema design: OneToMany vs ManyToMany vs OneToOne relationships — pros/cons.
 - [ ] How do you implement pagination for APIs when dealing with very large datasets (hundreds of millions of records)?
