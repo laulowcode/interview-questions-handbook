@@ -4,10 +4,35 @@ This directory contains Python-specific interview questions and examples, organi
 
 ## 🐍 Topics Covered
 
-### Core Language and API Design
+### [Group A: Core Language & API Design](./01-core-language-and-api-design/)
+- GIL, async/await, Flask vs FastAPI vs Django
+- API versioning, ORM vs raw SQL
+- Database transactions (ACID), indexing, migrations
+- Schema relationships, pagination
 
-- [GIL (Global Interpreter Lock)](./01-core-language-and-api-design/01-GIL/) - Understanding Python's threading limitations
-- [Async/Await](./01-core-language-and-api-design/02-async-await/) - When to use async/await and when not to
+### [Group B: Performance, Caching & Scale](./02-performance-caching-scale/)
+- Redis caching patterns, rate limiting
+- Background jobs (Celery, Dramatiq, RQ)
+- Streaming responses, authentication methods
+- Security, logging, monitoring, profiling
+
+### [Group C: Concurrency, Async, IO & Data](./03-concurrency-async-io-data/)
+- Threading vs multiprocessing vs async
+- I/O optimization, file streaming
+- Retry logic, email/notifications
+- Data validation, schema changes, API contracts
+
+### [Group D: Deployment, Architecture, Reliability](./04-deployment-architecture-reliability/)
+- CI/CD, Docker best practices
+- Kubernetes deployment, zero downtime
+- Logging, migrations, backup/restore
+- Secrets management, environment separation
+
+### [Group E: Scalability, Resilience & Advanced](./05-scalability-resilience-advanced/)
+- Traffic scaling, load balancing
+- HTTP caching, failure handling
+- Microservices consistency, observability
+- Cost optimization, security audits, feature flags
 
 ## 🚀 Getting Started
 
