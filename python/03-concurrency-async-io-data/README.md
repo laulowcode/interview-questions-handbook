@@ -1,6 +1,6 @@
 ## ⚡ Group C: Concurrency, Async, IO & Data
 
-- [ ] Concurrency vs parallelism in Python: threading vs multiprocessing vs async — when to use each?
+- [X] Concurrency vs parallelism in Python: threading vs multiprocessing vs async — when to use each?
 - [ ] Optimizing I/O bound vs CPU bound — example: endpoint processing images or large JSON, how do you handle it?
 - [ ] Streaming upload/download of large files: chunked upload, chunked download, buffer size — temp files, security
 - [ ] Rate of failures & retry logic: Circuit Breaker, Exponential Backoff, Retry Policy — deployment strategies
