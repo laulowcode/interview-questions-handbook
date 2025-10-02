@@ -1,7 +1,7 @@
 ## 🚀 Group B: Performance, Caching & Scale
 
-- [ ] Redis caching: API result caching, DB query caching, cache invalidation — common patterns
-- [ ] Rate limiting: how do you protect APIs from abuse (small DDoS, spam) using rate limiting?
+- [X] Redis caching: API result caching, DB query caching, cache invalidation — common patterns
+- [X] Rate limiting: how do you protect APIs from abuse (small DDoS, spam) using rate limiting?
 - [ ] Background jobs/task queues: Celery vs Dramatiq vs RQ — which do you choose and why?
 - [ ] Streaming/chunked responses: when does backend need to stream data? How to implement?
 - [ ] Authentication/authorization: JWT vs sessions vs OAuth2 — which fits when?
