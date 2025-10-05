@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   python-interview:
@@ -12,11 +12,46 @@ services:
     environment:
       - PYTHONPATH=/app
       - PYTHONUNBUFFERED=1
+      - REDIS_HOST=redis
     working_dir: /app
+    depends_on:
+      - redis
     # Override the default command to keep container running
     command: tail -f /dev/null
     # Uncomment the following lines if you want to run a specific example
     # command: python 01-core-language-and-api-design/01-GIL/cpu_bound_example.py
 
+  redis:
+    image: redis:7-alpine
+    container_name: python-interview-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  rq-worker:
+    build: .
+    container_name: python-interview-rq-worker
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+      - REDIS_HOST=redis
+    working_dir: /app/02-performance-caching-scale/03-task-queues
+    depends_on:
+      redis:
+        condition: service_healthy
+    # Start RQ worker listening on high, default, and low priority queues
+    command: rq worker high default low --url redis://redis:6379/0 --with-scheduler
+    restart: unless-stopped
+
 volumes:
   pip-cache:
+  redis-data:
