@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+*.test
+test_*.py
+*_test.py
+
+# Downloaded/generated files
+downloaded_file.bin
+output.bin
+*.csv
+*.jsonl
+users_export.csv
+data_export.jsonl
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+!README.md
+!QUICKSTART.md
+

@@ -52,6 +52,22 @@ services:
     command: rq worker high default low --url redis://redis:6379/0 --with-scheduler
     restart: unless-stopped
 
+  streaming-api:
+    build:
+      context: ./02-performance-caching-scale/04-streaming-chunked-responses
+      dockerfile: Dockerfile
+    container_name: python-interview-streaming-api
+    volumes:
+      # Mount only the streaming examples directory for development
+      - ./02-performance-caching-scale/04-streaming-chunked-responses:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "8000:8000"
+    # Start FastAPI server with hot reload for development
+    command: uvicorn streaming_examples:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
 volumes:
   pip-cache:
   redis-data:
