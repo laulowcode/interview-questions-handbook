@@ -68,6 +68,21 @@ services:
     command: uvicorn streaming_examples:app --host 0.0.0.0 --port 8000 --reload
     restart: unless-stopped
 
+  profiling-examples:
+    build:
+      context: ./02-performance-caching-scale/09-performance-optimization-profiling
+      dockerfile: Dockerfile
+    container_name: python-interview-profiling
+    volumes:
+      # Mount profiling examples directory for development
+      - ./02-performance-caching-scale/09-performance-optimization-profiling:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+    # Keep container running for interactive use
+    command: tail -f /dev/null
+    restart: unless-stopped
+
 volumes:
   pip-cache:
   redis-data:

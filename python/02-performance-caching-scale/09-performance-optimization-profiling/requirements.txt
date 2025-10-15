@@ -1,0 +1,22 @@
+# Performance Profiling Tools
+# Install with: pip install -r requirements.txt
+
+# Statistical profiler with beautiful output
+pyinstrument>=4.6.0
+
+# Multi-threaded aware profiler
+yappi>=1.4.0
+
+# Line-by-line profiling
+line-profiler>=4.1.0
+
+# Memory profiling
+memory-profiler>=0.61.0
+
+# Visualization tools
+snakeviz>=2.2.0  # Interactive cProfile viewer
+gprof2dot>=2022.7.29  # Convert profiles to graphs
+
+# Optional: Production profiling
+# py-spy>=0.3.14  # Sampling profiler, no code changes needed
+
